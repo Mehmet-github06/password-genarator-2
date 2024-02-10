@@ -7,7 +7,7 @@ This is a simple web application where users can generate secure passwords with 
 
 ## Live Link
 
-[Password Generator](https://your-password-generator-link.com)
+[Password Generator](https://password-genarator-2.vercel.app/)
 
 ## Features
 
