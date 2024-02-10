@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Password Generator</title>
+
+		<!-- favicon  -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+		<!-- font awesome cdn -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- css  -->
+		<link rel="stylesheet" href="style.css" />
+
+		<!-- google font  -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,600;1,700;1,800&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- notfy -->
+		<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+	  />
+
+	  <!-- favicon  -->
+	  <link rel="shortcut icon" href="lock.png" type="image/x-icon">
+	  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- title  -->
+			<div class="top">
+				<h3>Password Generator</h3>
+			</div>
+
+			<!-- password result display area  -->
+			<section class="passDisplay">
+				<span id="passResult"> P4$5W0rD! </span>
+				<i class="fa-regular fa-copy" id="clipboard" style="display:none;"></i>
+			</section>
+			<!-- end of password result display area  -->
+
+			<!-- bottom side -->
+			<section class="bottom">
+				<!-- char lenght -->
+				<article class="lenght">
+					<div class="char-text">
+						<h3>Character Length</h3>
+					</div>
+					<div class="len-number">
+						<span id="rangeValue">1</span>
+					</div>
+				</article>
+				<!-- ends of char lenght -->
+				<article class="rangebar">
+					<input
+						type="range"
+						id="myRange"
+						min="1"
+						max="20"
+						value="1"
+					/>
+				</article>
+
+				<!--# ==================== checkbox ===================== -->
+				<article class="checboxes">
+					<ul>
+						<li>
+							<input type="checkbox" name="tick" id="upperCase" />
+							<label for="upperCase"
+								>Include Uppercase Letters</label
+							>
+						</li>
+						<li>
+							<input type="checkbox" name="tick" id="lowerCase" />
+							<label for="lowerCase"
+								>Include Lowercase Letters</label
+							>
+						</li>
+						<li>
+							<input
+								type="checkbox"
+								name="tick"
+								id="incNumbers"
+							/>
+							<label for="incNumbers">Include Numbers</label>
+						</li>
+						<li>
+							<input
+								type="checkbox"
+								name="tick"
+								id="incSymbols"
+							/>
+							<label for="incSymbols">Include Symbols</label>
+						</li>
+					</ul>
+				</article>
+				<!--# ================ ends of checkbox ================= -->
+
+				<!--] ==================== strength ===================== -->
+				<article class="strength">
+					<div>
+						<h5>STRENGTH</h5>
+					</div>
+					<div class="right">
+						<div>
+							<span id="difText"></span>
+						</div>
+						<div>
+							<ul class="difBars">
+								<li id="liFirst"></li>
+								<li id="liSecond"></li>
+								<li id="liThird"></li>
+								<li id="liFourth"></li>
+							</ul>
+						</div>
+					</div>
+				</article>
+				<!--] ==================== ends of strength ===================== -->
+
+				<!--| ==================== generate ===================== -->
+				<!--! this section is optionel  -->
+				<button type="button" id="generateBtn" >
+					<h3>GENERATE</h3>
+					<i class="fa-solid fa-arrow-right-to-bracket"></i>
+				</button>
+				<!--| ==================== ends of generate ===================== -->
+			</section>
+			<!-- ends of bottom side -->
+		</div>
+		<script src="./app.js"></script>
+	</body>
+</html>

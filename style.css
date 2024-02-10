@@ -1,0 +1,249 @@
+:root {
+	--form-control-color: rebeccapurple;
+	--form-control-disabled: #959495;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "JetBrains Mono", monospace;
+}
+
+body {
+	background-color: #111016;
+	overflow-x: hidden;
+}
+
+.container {
+	color: #fff;
+	width: 30rem;
+	margin: 1rem auto;
+}
+
+.container .top {
+	color: #807c92;
+	text-align: center;
+	padding: 1.5rem;
+	font-weight: 700;
+}
+.passDisplay {
+	background-color: #24232b;
+	padding: 1.5rem;
+	margin-bottom: .7rem;
+	display: flex;
+	justify-content: space-between;
+	font-size: 2rem;
+}
+#passResult {
+	color: orange;
+}
+
+/* ===================== bottom side ==================== */
+.bottom {
+	background-color: #24232b;
+	padding: 1.5rem;
+}
+.lenght {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.rangebar input {
+	width: 100%;
+	margin-bottom: 1.5rem;
+}
+
+.checboxes {
+	margin-bottom: 1.5rem;
+}
+
+.checboxes ul {
+	list-style: none;
+	line-height: 2rem;
+}
+
+.strength {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #191820;
+	padding: 1rem 2rem;
+	margin-bottom: 1.5rem;
+}
+
+.strength h5 {
+	color: #a3ffae;
+}
+
+.strength .difBars {
+	display: flex;
+	gap: 0.5rem;
+	list-style: none;
+}
+
+.strength .right {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.strength .difBars li {
+	border: 1px solid #fff;
+	width: 10px;
+	height: 30px;
+}
+
+/* generate */
+#generateBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	background-color: #a3ffae;
+	color: #000;
+	font-weight: 300;
+	padding: 1.2rem;
+	width: 100%;
+	border: 1px solid #000;
+	outline: none;
+	transition: all 0.4s;
+}
+#generateBtn:hover {
+	background-color: #000;
+	border: 1px solid #a3ffae;
+	color: #a3ffae;
+	transition: all 0.4s;
+	cursor: pointer;
+	box-shadow: 1px 1px 10px white;
+	letter-spacing: 1rem;
+}
+
+/* ===================== bottom side ==================== */
+
+.char-text h3 {
+	color: orange;
+}
+
+#clipboard,
+#rangeValue {
+	color: #a3ffae;
+}
+#clipboard {
+	cursor: pointer;
+}
+
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	padding: 10px;
+	border: 2px solid #a3ffae;
+	cursor: pointer;
+	position: relative;
+	top: 0.3rem;
+}
+
+input[type="checkbox"]:checked {
+	background-color: #000;
+	border-color: orange;
+}
+
+input[type="checkbox"]:checked::before {
+	content: "\2713";
+	font-size: 20px;
+	color: orange;
+	background-color: transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 8px;
+	border-radius: 5px;
+	background: #a3ffae;
+	outline: none;
+	opacity: 0.4;
+	transition: opacity 0.2s;
+}
+
+input[type="range"]:hover {
+	opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #a3ffae;
+	border: 2px solid #000;
+	cursor: pointer;
+	margin-top: -8px;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+	background: #000;
+	border: 2px solid #a3ffae;
+}
+input[type="range"]::-moz-range-thumb {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #000;
+	cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 1rem;
+	cursor: pointer;
+	background: linear-gradient(to right, #a3ffae, red);
+	border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-track {
+	width: 100%;
+	height: 8px;
+	cursor: pointer;
+	background: linear-gradient(to right, #a3ffae, red);
+	border-radius: 5px;
+	border: 1px solid #a3ffae;
+}
+
+input[type="range"]::-webkit-progress-value {
+	background: linear-gradient(to right, #a3ffae, #000);
+}
+
+/* wıdth 22 rem responsıve mobıl ekran  */
+@media screen and (max-width:544px) {
+	.container {
+		width: 24rem;		
+	}
+	.passDisplay {
+		padding: 1rem;
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width:400px) {
+	.container {
+		width: 22rem;		
+	}
+	.passDisplay {
+		padding: 1rem;
+		font-size: 1.3rem;
+	}
+	input[type="range"] {
+		opacity: .7;
+		transition: opacity 0.2s;
+	}
+}
